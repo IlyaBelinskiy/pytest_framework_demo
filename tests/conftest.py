@@ -2,12 +2,10 @@ from pytest import fixture
 
 from selenium  import webdriver
 
-from webdriver_manager.chrome import ChromeDriverManager # For Chrome
 
 @fixture(scope='function')
 def chrome_browser():
-    browser = webdriver.Chrome(ChromeDriverManager().install())
-    # browser = webdriver.Chrome("/usr/local/bin/chromedriver")
+    browser = webdriver.Chrome()
     # return browser
     yield browser
 
