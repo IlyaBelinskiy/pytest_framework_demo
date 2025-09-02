@@ -8,8 +8,7 @@ from selenium.webdriver.chrome.service import Service
 @fixture(scope='function')
 def chrome_browser():
     service = Service(executable_path='./chromedriver')
-    options = webdriver.ChromeOptions()
-    browser = webdriver.Chrome(service=service, options=options)
+    browser = webdriver.Chrome(service=service)
     return browser
     # yield browser
 
