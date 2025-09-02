@@ -5,7 +5,7 @@ from selenium  import webdriver
 
 @fixture(scope='function')
 def chrome_browser():
-    browser = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver/chromedriver-linux64/chromedriver')
+    browser = webdriver.Chrome()
     # return browser
     yield browser
 
