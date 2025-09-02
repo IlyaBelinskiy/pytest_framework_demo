@@ -5,8 +5,9 @@ from selenium  import webdriver
 
 @fixture(scope='function')
 def chrome_browser():
-    chromedriver_path = "/var/jenkins_home/workspace/pytest/tests/chromedriver" 
-    browser = webdriver.Chrome(executable_path=chromedriver_path)
+    service = Service(executable_path='/var/jenkins_home/workspace/pytest/tests/chromedriver')
+    options = webdriver.ChromeOptions()
+    browser = webdriver.Chrome(service=service, options=options)
     return browser
     # yield browser
 
