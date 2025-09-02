@@ -6,11 +6,11 @@ from selenium  import webdriver
 @fixture(scope='function')
 def chrome_browser():
     browser = webdriver.Chrome(executable_path="/usr/local/bin/chromedriver")
-    # return browser
-    yield browser
+    return browser
+    # yield browser
 
     # Teardown
-    print("I am tearing down this browser")
+    # print("I am tearing down this browser")
 
 
 
